@@ -17,7 +17,7 @@ This page contains setup info on how to configure HTTP tunnel using https://gith
 ```
 openssl req -x509 -nodes -newkey rsa:2048 -sha256 -keyout server.key -out server.crt
 ```
-4. Prepare startup script, and update the path if needed
+5. Prepare startup script, and update the path if needed
 ```
 #!/bin/bash
 rm -f nohup.out
@@ -27,11 +27,11 @@ nohup sudo /home/ec2-user/go-http-tunnel/tunneld \
   -tlsCrt .tunneld/server.crt \
   -tlsKey .tunneld/server.key &
 ```
-5. Start `tunneld` by executing the startup script
-6. Review `nohup.out` to make sure `tunneld` is up & running
-7. Follow the steps from https://nginxproxymanager.com/setup/ to install nginx proxy manager 
+6. Start `tunneld` by executing the startup script
+7. Review `nohup.out` to make sure `tunneld` is up & running
+8. Follow the steps from https://nginxproxymanager.com/setup/ to install nginx proxy manager 
 8. Create a proxy host with valid SSL certificate (Let's Encrypt) with valid FQDN that points to EC2 IP with TCP port `10443` (tunneld).  
-9. (optional) create a proxy with HTTPS that points to local port `81`.   Block inbound port `81` after vertification. 
+9. (optional) create a proxy host with valid SSL certificate (Let's Encrypt) that points to local port `81`.   Check and block inbound port `81`.
 
 ### Install tunnel client on PVWA
 
