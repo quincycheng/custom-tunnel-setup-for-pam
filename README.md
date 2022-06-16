@@ -10,10 +10,10 @@ This page contains setup info on how to configure HTTP tunnel using https://gith
 ## Setup
 
 ### Install tunneld & nginx proxy manager on AWS EC2
-1. Create a AWS EC2 instance (Amazon Linux 2) & allow inbound ports: 22, 81, 443, 5223
-2. Install docker & docker-compose
+1. Create a AWS EC2 instance (Amazon Linux 2) & allow inbound ports: `22, 81, 443, 5223`
+2. Install `docker` & `docker-compose`
 3. Download tunnel client for Linux from https://github.com/mmatczuk/go-http-tunnel/releases
-4. Prepare server key & cert
+4. Prepare server key & cert files
 ```
 openssl req -x509 -nodes -newkey rsa:2048 -sha256 -keyout server.key -out server.crt
 ```
@@ -31,7 +31,7 @@ nohup sudo /home/ec2-user/go-http-tunnel/tunneld \
 6. Review `nohup.out` to make sure `tunneld` is up & running
 7. Follow the steps from https://nginxproxymanager.com/setup/ to install nginx proxy manager 
 8. Create a proxy host with valid SSL certificate (Let's Encrypt) with valid FQDN that points to EC2 IP with TCP port `10443` (tunneld).  
-9. (optional) create a proxy with HTTPS that points to local port 81.   Remove inbound port 81 after vertification. 
+9. (optional) create a proxy with HTTPS that points to local port `81`.   Block inbound port `81` after vertification. 
 
 ### Install tunnel client on PVWA
 
