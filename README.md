@@ -1,6 +1,6 @@
 # Custom HTTP tunnel setup for on-permise PAM
 
-This page contains setup info on how to configure HTTP tunnel using https://github.com/mmatczuk/go-http-tunnel for On-premise PAM
+This page contains setup info on how to configure HTTP tunnel using https://github.com/mmatczuk/go-http-tunnel for on-premise PAM
 
 ## Architecture
 
