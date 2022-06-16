@@ -56,4 +56,4 @@ tunnel -config tunnel.yml start-all
 
 ### Create CEM user on PAM and confgure CEM
 Please refer to https://docs.cyberark.com/Product-Doc/OnlineHelp/CEM/Latest/en/Content/CloudAdmin/kd_PAS-PrivCloud.htm for details
-The URL will be the one from nginx proxy manage with valid FQDN & SSL certificate (e.g. `https://tunnel.customer.quincycheng.com`)
+The URL will be the one from nginx proxy manager with valid FQDN & SSL certificate (e.g. `https://tunnel.customer.quincycheng.com`)
